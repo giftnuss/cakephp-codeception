@@ -4,7 +4,8 @@ CakePHP 3 Codeception Module
 [![Build Status](https://api.travis-ci.org/cakephp/codeception.png)](https://travis-ci.org/cakephp/codeception)
 [![License](https://poser.pugx.org/cakephp/codeception/license.svg)](https://packagist.org/packages/cakephp/codeception)
 
-A [codeception](http://codeception.com) module to test your CakePHP 3 powered application. Using Codeception with CakePHP opens up a whole new set of testing capabilities.
+A [codeception](http://codeception.com) module to test your CakePHP 3 powered application. Using Codeception with CakePHP 
+opens up a whole new set of testing capabilities.
 
 #####Front-end testing
 _(i.e. browser-based workflow tests)_
@@ -28,24 +29,14 @@ Usage
 From a CakePHP application, run the following from the command-line:
 
 ```console
-$ composer require --dev cakephp/codeception:dev-master && composer run-script post-install-cmd
-```
-
-If you are developing a plugin, add the post-install script to your `composer.json` first:
-
-```json
-{
-    "scripts": {
-        "post-install-cmd": "Cake\\Codeception\\Console\\Installer::customizeCodeceptionBinary"
-    }
-}
+$ composer require --dev cakephp/codeception:dev-master
 ```
 
 Once installed, you can now run `bootstrap` which will create all the codeception required files
 in your application:
 
 ```console
-$ vendor/bin/codecept bootstrap
+$ vendor/bin/cakecept bootstrap
 ```
 
 This creates the following files/folders in your `app` directory:

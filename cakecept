@@ -4,6 +4,21 @@
  * Codeception CLI
  */
 
+(function () {
+    $codecept = '/codeception/codeception/codecept';
+    $invendor = dirname(dirname(__DIR__)) . $codecept;
+    $inbase = './vendor' . $codecept;
+    if(file_exists($invendor)) {
+        require $invendor;
+    }
+    elseif(file_exists($inbase)) {
+        require $inbase;
+    }
+    else {
+        throw new \Exception("Could not find codeception autload.php");
+    }
+})();
+
 require_once __DIR__.'/autoload.php';
 
 use Codeception\Application;
