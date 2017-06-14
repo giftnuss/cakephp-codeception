@@ -21,8 +21,5 @@
         "psr-4": {
             "Cake\\Codeception\\Test\\": "tests"
         }
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "~2.0"
     }
 }
